@@ -3,12 +3,14 @@ import {
   APIProvider, Map, Marker
 } from "@vis.gl/react-google-maps";
 
-export default function GoogleMapView() {
-  const position = {
-    lat: 53.54992,
-    lng: 10.00678,
-  };
+interface position {
+  lat: number,
+  lng : number,
+}
 
+export default function GoogleMapView({
+  position,
+} : {position : position}) {
   return (
     <div
       className="h-full w-full">
